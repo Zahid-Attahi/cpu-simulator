@@ -1,11 +1,11 @@
 # CPU Simulator
 
-A software simulation of a 16-instruction CPU written in Java, built from the bit level up. Includes a custom instruction set, an assembler that turns assembly text into machine code, a processor that fetches/decodes/executes instructions, and a two-level cache hierarchy (instruction cache + L2) with realistic cycle-cost modeling.
+A software simulation of a CPU with a 16-bit instruction set, written in Java and built from the bit level up. Includes a custom instruction set, an assembler that turns assembly text into machine code, a processor that fetches/decodes/executes instructions, and a two-level cache hierarchy (instruction cache + L2) with realistic cycle-cost modeling.
 
 ## Features
 
 - **Bit-level foundation** — no native integer arithmetic; addition, subtraction, multiplication, and shifting are all implemented with real digital-logic algorithms (ripple-carry addition, two's complement, shift-and-add multiplication)
-- **Custom 16-instruction ISA** — arithmetic, logic, memory, control flow, and register-copy instructions across two encoding formats
+- **Custom 16-bit instruction set** — 21 opcodes covering arithmetic, logic, memory, control flow, and register-copy, across two encoding formats
 - **Assembler** — parses human-readable assembly into 16-bit machine instructions and packs them into memory
 - **Full fetch → decode → execute → store pipeline** with a 32-register file and a call stack for `call`/`return`
 - **Two-level cache hierarchy** — 8-word instruction cache and a 4-line, 8-word L2 cache, write-through on stores
